@@ -12,7 +12,7 @@ def init_distributed():
 # Load and Prepare Model for Distributed Execution
 def load_model():
     # Load vLLM model
-    model = vllm.VLLMModel(model_name="llama3-8b")  # Replace with your model
+    model = vllm.VLLMModel(model_name="meta-llama/Llama-3.2-1B-Instruct")  # Replace with your model
     model = torch.nn.parallel.DistributedDataParallel(model)
     return model
 
